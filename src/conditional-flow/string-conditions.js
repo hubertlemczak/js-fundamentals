@@ -49,10 +49,35 @@ function getMiddleLetter(val1) {
 // Summer - June to August
 // Autumn - September to November
 // Winter - December to February
+const months = [
+  'December',
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+];
+
 function seasonForMonth(monthName) {
-  const winter = /(december)|(january)|(february)/i.test(monthName) + 'Winter';
-  return winter;
+  const monthIndex = months.indexOf(monthName);
+  // console.log(monthIndex);
+  return monthIndex >= 0 && monthIndex <= 2
+    ? 'Winter'
+    : monthIndex >= 3 && monthIndex <= 5
+    ? 'Spring'
+    : monthIndex >= 6 && monthIndex <= 8
+    ? 'Summer'
+    : monthIndex >= 9 && monthIndex <= 11
+    ? 'Autumn'
+    : '';
 }
+// console.log(seasonForMonth('Maasdrch'));
 
 module.exports = {
   a: isHello,
