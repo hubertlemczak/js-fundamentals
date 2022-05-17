@@ -13,7 +13,7 @@ for (let i = 5; i < 11; i++) {
 }
 // TODO: Write a for loop that adds all the even numbers between 0 and 6 (0, 2, 4, 6) to evenNums
 for (let i = 0; i < 7; i++) {
-  if (i % 2 == 0) {
+  if (i % 2 === 0) {
     evenNums.push(i);
   }
 }
