@@ -50,8 +50,8 @@ function getMiddleLetter(val1) {
 // Autumn - September to November
 // Winter - December to February
 function seasonForMonth(monthName) {
-  season = monthName.test(/january/i);
-  return season;
+  const winter = /(december)|(january)|(february)/i.test(monthName) + 'Winter';
+  return winter;
 }
 
 module.exports = {
