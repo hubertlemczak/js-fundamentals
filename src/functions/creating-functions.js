@@ -25,7 +25,7 @@ function increment(num) {
 
 function smiley(name) {
   const nameUpper = name.charAt(0).toUpperCase() + name.slice(1);
-  return 'Hi, ' + nameUpper + ' :)';
+  return `Hi, ${nameUpper} :)`;
 }
 // TODO: change undefined to be the name of the functions you defined
 module.exports = {
